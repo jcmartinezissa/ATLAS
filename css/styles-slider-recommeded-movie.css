@@ -1,0 +1,13 @@
+@media (max-width: 640px) {
+  .title-movie-recommended {
+    font-size: 1rem;
+  }
+  .img-slider-recommeded {
+    flex: none;
+    padding-bottom: 5px;
+  }
+  .carousel-movie-recommeded {
+    position: fixed;
+    transition: none;
+  }
+}
