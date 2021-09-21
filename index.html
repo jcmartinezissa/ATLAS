@@ -11,6 +11,7 @@
   <title>★ATLAS★</title>
   <link rel="stylesheet" href="css/peliculas_estreno.css">
   <link rel="stylesheet" href="css/styles-slider-recommeded-movie.css">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
@@ -20,7 +21,7 @@
         <img src="img/logo.svg" alt="logo_atlas" width="250" height="60" class="d-inline-block align-text-top">
       </a>
       <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barranav"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,7 +32,7 @@
           <a id="btnRegistro" name="btnRegistro" class="nav-link active" href="#" data-bs-toggle="modal"
             data-bs-target="#formulario">Iniciar Sesion</a>
 
-          <a id="btnLogin" name="btnLogin" class="nav-link active" href="#">Registarse</a>
+          <a id="btnLogin" name="btnLogin" class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#registrarse">Registarse</a>
         </div>
       </div>
   </nav>
@@ -154,40 +155,77 @@
     </div>
   </section>
   <!--FIN ESTRENOS-->
-  <!-- Modal -->
+  <!-- Modal Iniciar sesión-->
   <div class="modal fade" id="formulario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
+        
         <div class="modal-header">
           <h5 class="modal-title" id="formularioTitulo">Ingrese sus datos</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form>
+          
             <label for="usuario">Usuario</label>
             <input class="form-control" id="usuario" name="contrasenia" type="text" required>
             <br>
             <label for="contrasenia">Contraseña</label>
             <input class="form-control" id="contrasenia" name="contrasenia" type="password" minlength="4" maxlength="10"
               required>
-            <input class="btn btn-primary" type="submit" onclick="validacion()" value="Guardar">
-          </form>
+          
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <button type="submit" class="btn btn-primary" onclick="login()">Iniciar Sesión</button>
         </div>
+      
       </div>
     </div>
   </div>
+  <!--Modal Registrarse-->
+  <div class="modal fade" id="registrarse" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="formularioTitulo">Ingrese sus datos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="alerta1"class="alert alert-danger visually-hidden" role="alert">
+          This is a danger alert—check it out!
+        </div>
+        <div id="success1"class="alert alert-success visually-hidden" role="alert">
+          This is a success alert—check it out!
+        </div>
+          <label for="usuario">Usuario</label>
+          <input class="form-control" id="usuario1" name="usuario1" type="text" required>
+          <br>
+          <label for="contrasenia">Contraseña</label>
+          <input class="form-control" id="contrasenia1" name="contrasenia1" type="password" minlength="4" maxlength="10"
+            required>
+            <br>
+            <label for="correo">Correo</label>
+            <input class="form-control" id="correo" name="correo" type="email">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onclick="Altas()">Guardar</button>
+      </div>
+   
+    </div>
+  </div>
+</div>
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <a class="btn-link" href="#">AYUDA</a>
-          <a class="btn-link" href="#">PRIVACIDAD</a>
-          <a class="btn-link" href="#">TERMINOS DE USO</a>
+          <a class="soporte link" href="#">AYUDA</a>
+          <a class="soporte link" href="#">PRIVACIDAD</a>
+          <a class="soporte link" href="#">TERMINOS DE USO</a>
         </div>
       </div>
     </div>
@@ -215,6 +253,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
+    <script src="app/index.js"></script>
 </body>
 
 </html>
