@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,12 +12,11 @@
   <link rel="stylesheet" href="css/styles-slider-recommeded-movie.css">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="img/logo.svg" alt="logo_atlas" width="250" height="60" class="d-inline-block align-text-top">
+      <a class="navbar-brand" href="index.html">
+        <img src="/img/logo.svg" alt="logo_atlas" width="250" height="60" class="d-inline-block align-text-top">
       </a>
       <a class="navbar-brand" href="#"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barranav"
@@ -27,12 +25,15 @@
       </button>
       <div class="collapse navbar-collapse" id="barranav">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Peliculas</a>
-          <a class="nav-link active" href="#">Series</a>
-          <a id="btnRegistro" name="btnRegistro" class="nav-link active" href="#" data-bs-toggle="modal"
-            data-bs-target="#formulario">Iniciar Sesion</a>
+          <a class="nav-link active text-light" aria-current="page" href="#">Peliculas</a>
+          <a class="nav-link active text-light" href="#">Series</a>
+          <a id="btninicio text-light" name="btninicio" class="nav-link active text-light" href="#"
+            data-bs-toggle="modal" data-bs-target="#formulario">Iniciar Sesion</a>
+          <a id="btnRegistro text-light" name="btnRegistro" class="nav-link active text-light" href="#"
+            data-bs-toggle="modal" data-bs-target="#registro">Registrarse</a>
+            <a id="btnfavoritos text-light" name="btnRegistro" class="nav-link active text-light visually-hidden" href="#"
+            data-bs-toggle="modal" data-bs-target="#Favoritos">Mis Favoritos</a>        
 
-          <a id="btnLogin" name="btnLogin" class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#registrarse">Registarse</a>
         </div>
       </div>
   </nav>
@@ -155,14 +156,14 @@
     </div>
   </section>
   <!--FIN ESTRENOS-->
-  <!-- Modal Iniciar sesión-->
+  <!-- Modal iniciar sesion-->
   <div class="modal fade" id="formulario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         
         <div class="modal-header">
-          <h5 class="modal-title" id="formularioTitulo">Ingrese sus datos</h5>
+          <h5 class="modal-title" id="formularioTitulo">Ingresá con tu cuenta</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -173,52 +174,50 @@
             <label for="contrasenia">Contraseña</label>
             <input class="form-control" id="contrasenia" name="contrasenia" type="password" minlength="4" maxlength="10"
               required>
-          
+          </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="submit" class="btn btn-primary" onclick="login()">Iniciar Sesión</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger" onclick="LogIn()">Entrar</button>
         </div>
       
       </div>
     </div>
   </div>
-  <!--Modal Registrarse-->
-  <div class="modal fade" id="registrarse" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-  aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        <h5 class="modal-title" id="formularioTitulo">Ingrese sus datos</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div id="alerta1"class="alert alert-danger visually-hidden" role="alert">
-          This is a danger alert—check it out!
+  <!-- Modal iniciar sesion-->
+  <!-- Modal formulario registro-->
+  <div class="modal fade" id="registro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registroTitulo">Ingrese sus datos para registrarse</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div id="success1"class="alert alert-success visually-hidden" role="alert">
-          This is a success alert—check it out!
-        </div>
-          <label for="usuario">Usuario</label>
-          <input class="form-control" id="usuario1" name="usuario1" type="text" required>
-          <br>
-          <label for="contrasenia">Contraseña</label>
-          <input class="form-control" id="contrasenia1" name="contrasenia1" type="password" minlength="4" maxlength="10"
-            required>
+        <div class="modal-body">
+          <form>
+            <label for="usuario">Usuario</label>
+            <input class="form-control" id="usuario1" name="contrasenia1" type="text" required>
             <br>
-            <label for="correo">Correo</label>
+            <label for="contrasenia">Contraseña</label>
+            <input class="form-control" id="contrasenia1" name="contrasenia1" type="password" minlength="4"
+              maxlength="10" required>
+            <br>
+            <label for="contrasenia">Correo</label>
             <input class="form-control" id="correo" name="correo" type="email">
-        
+            <br>
+            <label for="contrasenia">Avatar /Foto de perfil</label>
+            <input class="form-control" id="avatar" name="avatar" type="file">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="CerrarRegistro" name="CerrarRegistro"> Cerrar</button>
+          <button type="button" class="btn btn-danger" id="guardar" name="guardar" onclick="NuevoUsuario()" >Guardar</button>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" onclick="Altas()">Guardar</button>
-      </div>
-   
     </div>
   </div>
-</div>
+  <!-- Modal Registros-->
   <footer>
     <div class="container">
       <div class="row">
@@ -228,6 +227,7 @@
           <a class="soporte link" href="#">TERMINOS DE USO</a>
         </div>
       </div>
+    </div>
     </div>
     </div>
     <div class="container">
@@ -250,6 +250,7 @@
       </div>
     </div>
   </footer>
+  <script src="/app/index.js">  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
