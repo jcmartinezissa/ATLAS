@@ -55,9 +55,9 @@ function LogIn() {
     let usuario = document.getElementById("usuario").value;
     let pass = document.getElementById("contrasenia").value;
 
- 
-   if (Cuentas.find(item=> item.usuario == usuario && item.clave==pass)){
+    if (Cuentas.find(item=> item.usuario == usuario && item.clave==pass)){
      alert('Bienvenido');
+     
    }else{
     alert('Nombre de usuario o contraeña no validos');
    }
