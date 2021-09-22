@@ -1,4 +1,9 @@
-const cuentas = [];
+const Cuentas = [];
+const apiKey= '74a3a56f8ad0a7567bd3d73843e6bfbd';
+
+
+
+console.log(Cuentas);
 class Cuenta {
   constructor(nombre, clave, correo, avatar, admin) {
     this.nombre = nombre;
@@ -9,10 +14,22 @@ class Cuenta {
   }
 }
 
-function leerUsuarios() {
-  if (localStorage.getItem("Cuentas")) {
-    cuentas = JSON.parse(localStorage.getItem("Cuentas"));
-  }
+class tarjeta {
+   constructor (id, nombre, resenia, poster, categoria, anio, puntaje){
+      this.id=id;
+      this.nombre=nombre;
+      this.resenia=resenia;
+      this.poster=poster;
+      this.categoria=categoria;
+      this.anio=anio;
+      this.puntaje= puntaje;
+   }
+}
+
+function NuevaCard (){
+  
+    let card = new tarjeta;
+
 }
 
 function NuevoUsuario() {
@@ -21,51 +38,39 @@ function NuevoUsuario() {
   let avatar = document.getElementById("avatar").value;
   let correo = document.getElementById("correo").value;
 
-  let nuevo = new Cuenta(usuario, clave, avatar, correo);
+  let nuevo = new Cuenta(usuario, clave, correo, avatar);
 
-  leerUsuarios();
+  if (Cuentas.find(item=> item.nombre==usuario)){
+    alert('El nombre de usuario ya existe');
+  }else{
 
-  cuentas.forEach(function Buscar(e) {
-    if (cuentas.nombre == usuario) {
-      alert("el usuario ya existe");
-      return;
-    }
-  });
-  cuentas.push(nuevo);
-  localStorage.setItem("cuentas", JSON.stringify(nuevo));
+  Cuentas.push(nuevo);
+  localStorage.setItem("Cuentas", JSON.stringify(nuevo));
   alert("Agregado");
-  document.getElementById("CerrarRegistro").click();
+  }
 }
 
 function LogIn() {
+   let usuarios=JSON.parse(localStorage.getItem("Cuentas"));
 
     let usuario = document.getElementById("usuario").value;
-    let clave = document.getElementById("contrasenia").value;
-    let entro = false;
+    let pass = document.getElementById("contrasenia").value;
 
-  leerUsuarios();
-
-  cuentas.forEach(function validar(e) {
-    if (cuentas.nombre == usuario && cuentas.clave == clave) {
-      entro = true;
-    }
-  });
-  if ((entro = true)) {
-    document.getElementById("btninicio").hidden;
-    document.getElementById("btnRegistro").hidden = true;
-    document.getElementById("btnFavoritos").hidden = false;
-  } else {
-    alert("Nombre de usuario o contraseña no validos");
-  }
-}
+ 
+   if (Cuentas.find(item=> item.usuario == usuario && item.clave==pass)){
+     alert('Bienvenido');
+   }else{
+    alert('Nombre de usuario o contraeña no validos');
+   }
+};
 
 function EliminarUsuario(orden){
 
     listadeusuarios.splice(inx, 1);
     localStorage.setItem("usuarios", JSON.stringify(listadeusuarios));
     console.log("usuario:" + usuario + " eliminado");
-    break;
-
-
 };
+
+
+
 
