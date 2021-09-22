@@ -1,5 +1,10 @@
 const Cuentas = [];
+const cuentas = [];
 const apiKey= '74a3a56f8ad0a7567bd3d73843e6bfbd';
+hideSuccess();
+hideAlerta();
+hideSuccess1();
+hideAlerta1();
 
 
 console.log(Cuentas);
@@ -30,13 +35,16 @@ function NuevaCard (){
     let card = new tarjeta;
 
 }
-
-if(cuentas.length == 0){
+/*
+if(localStorage.getItem("usuario")){
     let admin = new Cuenta(0,"admin","admin",true);
-    cuentas.push(admin);
+    Cuentas.push(admin);
+    let use = new Cuenta(0,"asd","1234",false);
+    Cuentas.push(use);
     window.localStorage.setItem("usuario",JSON.stringify(cuentas))
-
-}
+    localStorage.setItem("Cuentas", JSON.stringify(Cuentas));
+    console.log(Cuentas);
+}*/
 //inicio paliza
 function login(){
     let usuario = document.getElementById("usuario");
@@ -46,24 +54,44 @@ function login(){
     usuario.value = "";
     contrasenia.value = "";
 }
-function mostrarAlerta1(error){
+function mostrarAlerta1(texto){
     let alerta = document.getElementById("alerta1");
-    alerta.setAttribute("class","alert alert-danger");
-    alerta.innerHTML = error;
+    alerta.setAttribute("class","alert alert-danger text-center");
+    alerta.innerHTML = texto;
 }
 function hideAlerta1(){
     let alerta = document.getElementById("alerta1");
     alerta.setAttribute("class","alert visually-hidden alert-danger");
 }
 function mostrarSuccess1(texto){
-    let alerta = document.getElementById("success1");
-    alerta.setAttribute("class","alert alert-success");
+    let alerta = document.getElementById("exito1");
+    alerta.setAttribute("class","alert alert-success text-center");
     alerta.innerHTML = texto;
 }
 function hideSuccess1(){
-    let alerta = document.getElementById("success1");
+    let alerta = document.getElementById("exito1");
     alerta.setAttribute("class","alert visually-hidden alert-success");
     console.log(alerta);
+
+}
+function mostrarAlerta(texto){
+  let alerta = document.getElementById("alerta");
+  alerta.setAttribute("class","alert alert-danger text-center");
+  alerta.innerHTML = texto;
+}
+function hideAlerta(){
+  let alerta = document.getElementById("alerta");
+  alerta.setAttribute("class","alert visually-hidden alert-danger");
+}
+function mostrarSuccess(texto){
+  let alerta = document.getElementById("exito");
+  alerta.setAttribute("class","alert alert-success text-center");
+  alerta.innerHTML = texto;
+}
+function hideSuccess(){
+  let alerta = document.getElementById("exito");
+  alerta.setAttribute("class","alert visually-hidden alert-success");
+  console.log(alerta);
 
 }
 function Altas(id,nombre,clave,admin){
@@ -109,35 +137,57 @@ function Altas(id,nombre,clave,admin){
 //Fin Paliza
 
 function NuevoUsuario() {
-  let usuario = document.getElementById("usuario1").value;
-  let clave = document.getElementById("contrasenia1").value;
-  let avatar = document.getElementById("avatar").value;
-  let correo = document.getElementById("correo").value;
+  hideAlerta1();
+  hideSuccess1();
+  let usuario = document.getElementById("usuario1");
+  let clave = document.getElementById("contrasenia1");
+  let avatar = document.getElementById("avatar");
+  let correo = document.getElementById("correo");
 
-  let nuevo = new Cuenta(usuario, clave, correo, avatar);
+  let nuevo = new Cuenta(usuario.value, clave.value, correo.value, avatar.value);
 
-  if (Cuentas.find(item=> item.nombre==usuario)){
-    alert('El nombre de usuario ya existe');
-  }else{
+  if (Cuentas.find(item=> item.nombre==usuario.value)){
+    mostrarAlerta1("El nombre de usuario ya existe");
+    //alert('El nombre de usuario ya existe');
+  }else if (clave.value.length>3){
 
   Cuentas.push(nuevo);
-  localStorage.setItem("Cuentas", JSON.stringify(nuevo));
-  alert("Agregado");
+  localStorage.setItem("Cuentas", JSON.stringify(Cuentas));
+  mostrarSuccess1("Agregado")
+  //alert("Agregado");
   }
+  else{
+    mostrarAlerta1("Clave demasiado corta");
+  }
+  usuario.value ="";
+  clave.value ="";
+  correo.value="";
+  avatar.value="";
+
 }
 
 function LogIn() {
+  hideSuccess();
+  hideAlerta();
+
    let usuarios=JSON.parse(localStorage.getItem("Cuentas"));
 
-    let usuario = document.getElementById("usuario").value;
-    let pass = document.getElementById("contrasenia").value;
+    let usuario = document.getElementById("usuario");
+    let pass = document.getElementById("contrasenia");
 
-    if (Cuentas.find(item=> item.usuario == usuario && item.clave==pass)){
-     alert('Bienvenido');
+    if (Cuentas.find(item=> item.nombre == usuario.value && item.clave ==pass.value)){
+     //alert('Bienvenido');
+     mostrarSuccess("Bienvenido");
+     
+     let favoritos = document.getElementById("btnfavoritos text-light");
+     favoritos.setAttribute("class", "nav-link active text-light");
      
    }else{
-    alert('Nombre de usuario o contraeña no validos');
+    mostrarAlerta("Nombre de usuario o contraseña no validos");
+    //alert('Nombre de usuario o contraeña no validos');
    }
+   usuario.value= "";
+   pass.value="";
 };
 
 function EliminarUsuario(orden){
