@@ -2,7 +2,6 @@ const Cuentas = [];
 const apiKey= '74a3a56f8ad0a7567bd3d73843e6bfbd';
 
 
-
 console.log(Cuentas);
 class Cuenta {
   constructor(nombre, clave, correo, avatar, admin) {
