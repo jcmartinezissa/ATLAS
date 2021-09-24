@@ -1,0 +1,13 @@
+.tarjeta{
+    margin: 1rem;
+    padding: 0px;
+    border: 5px solid;
+    border-color: gray;
+    box-shadow: gray 20px;
+
+}
+.detalle{
+    padding: 1px;
+    color: white;
+    background-color: black;
+}

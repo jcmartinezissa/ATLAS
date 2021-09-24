@@ -1,6 +1,5 @@
 const Cuentas = [];
 const cuentas = [];
-const apiKey= '74a3a56f8ad0a7567bd3d73843e6bfbd';
 hideSuccess();
 hideAlerta();
 hideSuccess1();
@@ -18,23 +17,7 @@ class Cuenta {
   }
 }
 
-class tarjeta {
-   constructor (id, nombre, resenia, poster, categoria, anio, puntaje){
-      this.id=id;
-      this.nombre=nombre;
-      this.resenia=resenia;
-      this.poster=poster;
-      this.categoria=categoria;
-      this.anio=anio;
-      this.puntaje= puntaje;
-   }
-}
 
-function NuevaCard (){
-  
-    let card = new tarjeta;
-
-}
 /*
 if(localStorage.getItem("usuario")){
     let admin = new Cuenta(0,"admin","admin",true);
@@ -191,7 +174,6 @@ function LogIn() {
 };
 
 function EliminarUsuario(orden){
-
     listadeusuarios.splice(inx, 1);
     localStorage.setItem("usuarios", JSON.stringify(listadeusuarios));
     console.log("usuario:" + usuario + " eliminado");
