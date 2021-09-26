@@ -163,7 +163,7 @@ function LogIn() {
      mostrarSuccess("Bienvenido");
      
      let favoritos = document.getElementById("btnfavoritos text-light");
-     favoritos.setAttribute("class", "nav-link active text-light");
+     favoritos.setAttribute("class", "nav-link active text-dark");
      
    }else{
     mostrarAlerta("Nombre de usuario o contraseña no validos");
