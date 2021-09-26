@@ -11,19 +11,6 @@ class tarjeta {
     }
  };
 
-function NuevaTarjeta (){  
-    let titulo =document.getElementById('titulo').value;
-    let poster =document.getElementById('poster').value;
-    let categoria =document.getElementById('categoria').value;
-    let anio =document.getElementById('anio').value;
-
-    let card = new tarjeta (titulo, poster, categoria, anio);
-
-    localStorage.setItem('peliculas', JSON.parse(tarjeta));
-}
-
-
-
 function tarjtaShow(titulo, poster, categoria, resenia, anio, puntaje, id ){
 
     let tarjetaV =document.createElement('div');
@@ -56,3 +43,18 @@ function tarjtaShow(titulo, poster, categoria, resenia, anio, puntaje, id ){
     //insertar en grilla
     tarjetaV.append('grid');
 };
+
+function NuevaTarjeta (){  
+    let titulo =document.getElementById('titulo').value;
+    let poster =document.getElementById('poster').value;
+    let categoria =document.getElementById('categoria').value;
+    let anio =document.getElementById('anio').value;
+
+    let card = new tarjeta (titulo, poster, categoria, anio);
+
+    localStorage.setItem('peliculas', JSON.parse(tarjeta));
+
+    tarjtaShow(titulo, poster, 'Accion', 'linda', anio, 7, 100);
+}
+
+
