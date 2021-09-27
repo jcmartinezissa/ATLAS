@@ -17,14 +17,7 @@ class Cuenta {
   }
 }
 
-function login(){
-    let usuario = document.getElementById("usuario");
-    let contrasenia = document.getElementById("contrasenia");
-    console.log(cuentas.find(element => element.nombre == usuario.value && element.clave == contrasenia.value));
 
-    usuario.value = "";
-    contrasenia.value = "";
-}
 function mostrarAlerta1(texto){
     let alerta = document.getElementById("alerta1");
     alerta.setAttribute("class","alert alert-danger text-center");
@@ -65,37 +58,6 @@ function hideSuccess(){
   console.log(alerta);
 
 }
-function Altas(id,nombre,clave,admin){
-    hideAlerta1();
-    hideSuccess1();
-    //traer el array de usuarios 
-
-    let usuario = document.getElementById("usuario1");
-    let contrasenia = document.getElementById("contrasenia1");
-    let successOk = true;
-    texto = "¡Cuenta creada con éxito!";
-    if (usuario.value != "" && contrasenia.value != ""){
-        if(contrasenia.value.length>=4 && contrasenia.value.length <=10){
-            let cuenta = new Cuenta(cuentas.length,usuario.value,contrasenia.value,false);
-            cuentas.push(cuenta);
-            window.localStorage.setItem("usuario",JSON.stringify(cuentas))
-            console.table(cuentas);
-            console.log(contrasenia.value);
-            console.log(window.localStorage.getItem("usuario"));
-            mostrarSuccess1(texto);
-        }else{
-            let error = "Contraseña muy corta"
-            mostrarAlerta1(error);
-        }
-
-    }else{
-        let error = "Usuario y/o contraseña incorrectos"
-        mostrarAlerta1(error);
-    }
-    usuario.value = "";
-    contrasenia.value = "";        
-  }
-
 
 function NuevoUsuario() {
   hideAlerta1();
