@@ -23,6 +23,7 @@ function tarjtaShow(titulo, poster, categoria, resenia, anio, puntaje) {
   let reseniaV = document.createElement("p");
   let anioV = document.createElement("small");
   let puntajeV = document.createElement("p");
+  let separador= document.createElement('br');
   let btneliminar =document.createElement("button");
   let btnfav =document.createElement("button");
 
@@ -35,17 +36,22 @@ function tarjtaShow(titulo, poster, categoria, resenia, anio, puntaje) {
   imgV.className="card-img-top";
   puntajeV.className="puntaje";
 
+  tarjetaV.id=titulo;
   tituloV.innerText = titulo;
   imgV.src = poster;
   categoriaV=categoria;
-  reseniaV.innerText = resenia;
-  anioV.innerText = anio;
+  reseniaV.innerText = 'Reseña:'+resenia;
+  anioV.innerText = 'Año:'+anio;
   puntajeV.innerText = puntaje;
+  
+  
   btneliminar.innerHTML="Eliminar";
-  btnfav.innerHTML="+ Fav.";
+  btnfav.innerHTML="♡";
 
-  btneliminar.className="btn btn-dark";
-  btnfav.className="btn btn-dark";
+  btneliminar.className="btn btn-dark botones";
+  btneliminar.onclick = function () {eliminarTarjeta(categoria, titulo)};
+  btnfav.className="btn btn-dark botones";
+  btnfav.onclick=function() {favoritos()};
   
   tarjetaV.append(tituloV);
   tarjetaV.append(imgV);
@@ -53,6 +59,7 @@ function tarjtaShow(titulo, poster, categoria, resenia, anio, puntaje) {
   tarjetaV.append(cuerpoV);
   cuerpoV.append(reseniaV);  
   cuerpoV.append(anioV);
+  cuerpoV.append(separador);
   cuerpoV.append(btneliminar);
   cuerpoV.append(btnfav); 
 
@@ -90,5 +97,25 @@ function NuevaTarjeta() {
   tarjtaShow(titulo, poster, categoria, resenia, anio, puntaje);
 };
 
+function eliminarTarjeta(categoria, titulo){
+  console.log(categoria, titulo);
+   if (categoria=='Pelicula') {
+    let item = peliculas.findIndex(titulo => titulo === titulo); 
+    peliculas.splice(item, 1);
+    document.getElementById(titulo).remove();
+    window.localStorage.setItem("peliculas", JSON.stringify(peliculas));
+   }else {
+    let item = series.findIndex(titulo => titulo === titulo); 
+    series.splice(item, 1);
+    document.getElementById(titulo).remove();
+    window.localStorage.setItem("series", JSON.stringify(series));
+    alert('Serie eliminada');
+  } ;
+};
+
+function favoritos (){
+  alert("Funcion no implementada :(");
+
+}
 
 

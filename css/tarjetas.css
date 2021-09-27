@@ -13,5 +13,8 @@
     
     border-radius: 50%;
     background-color: hsla(0, 0%, 96%);
+}
 
+.botones{
+    margin: 2px;
 }
