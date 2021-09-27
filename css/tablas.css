@@ -1,0 +1,9 @@
+td, th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(1) {
+    background-color: #f1cdb0;
+  }

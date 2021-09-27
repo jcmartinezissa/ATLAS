@@ -26,7 +26,7 @@ function tarjtaShow(titulo, poster, categoria, resenia, anio, puntaje) {
   let separador= document.createElement('br');
   let btneliminar =document.createElement("button");
   let btnfav =document.createElement("button");
-
+  let br = document.createElement("br");
   //tarjeta
   tarjetaV.className = "card col-3";
   tarjetaV.style="width: 18rem;";

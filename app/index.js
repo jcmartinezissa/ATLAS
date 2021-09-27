@@ -1,4 +1,5 @@
 const Cuentas = [];
+
 hideSuccess();
 hideAlerta();
 hideSuccess1();
@@ -64,6 +65,7 @@ function hideSuccess(){
   console.log(alerta);
 
 }
+<<<<<<< HEAD
 function Altas(id,nombre,clave,admin){
     hideAlerta1();
     hideSuccess1();
@@ -96,6 +98,8 @@ function Altas(id,nombre,clave,admin){
   }
 
 
+=======
+>>>>>>> 5b98753116ee511ce47178b247cb4b335c3ecbb9
 function NuevoUsuario() {
   hideAlerta1();
   hideSuccess1();
@@ -108,13 +112,11 @@ function NuevoUsuario() {
 
   if (Cuentas.find(item=> item.nombre==usuario.value)){
     mostrarAlerta1("El nombre de usuario ya existe");
-    //alert('El nombre de usuario ya existe');
   }else if (clave.value.length>3){
 
   Cuentas.push(nuevo);
   localStorage.setItem("Cuentas", JSON.stringify(Cuentas));
   mostrarSuccess1("Agregado")
-  //alert("Agregado");
   }
   else{
     mostrarAlerta1("Clave demasiado corta");
@@ -134,9 +136,9 @@ function LogIn() {
     let usuario = document.getElementById("usuario");
     let pass = document.getElementById("contrasenia");
 
-    if (Cuentas.find(item=> item.nombre == usuario.value && item.clave ==pass.value)){
-     //alert('Bienvenido');
+    if (usuarios.find(item=> item.nombre == usuario.value && item.clave ==pass.value)){
      mostrarSuccess("Bienvenido");
+<<<<<<< HEAD
      
      let favoritos = document.getElementById("btnfavoritos");  
      favoritos.setAttribute("class", "nav-link active text-dark");
@@ -144,16 +146,23 @@ function LogIn() {
      let configuracion =document.getElementById("btnconfiguracion")
      configuracion.setAttribute("class", "nav-link active text-dark");
      
+=======
+     let favoritos = document.getElementById("btnfavoritos text-light");
+     favoritos.setAttribute("class", "nav-link active text-dark");
+     let configuracion = document.getElementById("configuracion");
+     let avatar = document.getElementById("avatar");
+     configuracion.className= "nav-link active";
+     avatar.className= "";
+>>>>>>> 5b98753116ee511ce47178b247cb4b335c3ecbb9
    }else{
     mostrarAlerta("Nombre de usuario o contraseña no validos");
-    //alert('Nombre de usuario o contraeña no validos');
    }
    usuario.value= "";
    pass.value="";
 };
 
 function EliminarUsuario(orden){
-    listadeusuarios.splice(inx, 1);
+    listadeusuarios.splice(orden, 1);
     localStorage.setItem("usuarios", JSON.stringify(listadeusuarios));
     console.log("usuario:" + usuario + " eliminado");
 };
