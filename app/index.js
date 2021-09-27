@@ -65,7 +65,6 @@ function hideSuccess(){
   console.log(alerta);
 
 }
-<<<<<<< HEAD
 function Altas(id,nombre,clave,admin){
     hideAlerta1();
     hideSuccess1();
@@ -98,8 +97,6 @@ function Altas(id,nombre,clave,admin){
   }
 
 
-=======
->>>>>>> 5b98753116ee511ce47178b247cb4b335c3ecbb9
 function NuevoUsuario() {
   hideAlerta1();
   hideSuccess1();
@@ -138,7 +135,6 @@ function LogIn() {
 
     if (usuarios.find(item=> item.nombre == usuario.value && item.clave ==pass.value)){
      mostrarSuccess("Bienvenido");
-<<<<<<< HEAD
      
      let favoritos = document.getElementById("btnfavoritos");  
      favoritos.setAttribute("class", "nav-link active text-dark");
@@ -146,14 +142,6 @@ function LogIn() {
      let configuracion =document.getElementById("btnconfiguracion")
      configuracion.setAttribute("class", "nav-link active text-dark");
      
-=======
-     let favoritos = document.getElementById("btnfavoritos text-light");
-     favoritos.setAttribute("class", "nav-link active text-dark");
-     let configuracion = document.getElementById("configuracion");
-     let avatar = document.getElementById("avatar");
-     configuracion.className= "nav-link active";
-     avatar.className= "";
->>>>>>> 5b98753116ee511ce47178b247cb4b335c3ecbb9
    }else{
     mostrarAlerta("Nombre de usuario o contraseña no validos");
    }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/f3620a907a.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <title>★ATLAS★: Configuración</title>
+  <link rel="stylesheet" href="/css/tarjetas.css">
+  <link rel="stylesheet" href="/css/styles-slider-recommeded-movie.css">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="stylesheet" href="css/peliculas_estreno.css">
+  <link rel="stylesheet" href="css/tablas.css">
+</head>
+<body class="container">
+  <nav class="navbar navbar-expand-lg navbar-light shadow p-3 mb-5 barra">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="/img/logo.svg" alt="logo_atlas" width="150" height="45" class="d-inline-block align-text-top">
+      </a>
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barranav"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-flex justify-content-end" id="barranav">
+        <div class="navbar-nav">
+          <a id="btninicio text-light" name="btninicio" class="nav-link active" href="index.html" data-bs-toggle="modal"
+            data-bs-target="#formulario">Cerrar Sesion</a>
+          <a id="btnfavoritos text-light" name="btnRegistro" class="nav-link active" href="#" data-bs-toggle="modal"
+            data-bs-target="#Favoritos">Mis Favoritos</a>
+            <a class="nav-link active" aria-current="page" href="configuracion.html">Configuración</a>       
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section>
+    <div class="container pt-4">
+      <h4 class=" shadow p-3 mb-5">
+        Peliculas
+      </h4>
+       <div id="pelisgrid" class="row shadow p-3 mb-5">        
+      </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="registropeli" tabindex="-1" aria-labelledby="registropelilLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="registropelilLabel">Nueva pelicula</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <br>
+            <label for="titulo">Titulo de la pelicula</label>
+            <input class="form-control" id="titulo" name="titulo" type="text" required>
+            <label for="poster">Poster URL</label>
+            <input class="form-control" id="poster" name="poster" type="text" required>
+            <label for="categoria">Categoria</label>
+            <select class="form-control" id="categoria" name="categoria" type="text" required>
+              <option>Pelicula</option>
+              <option>Serie</option>
+            </select>
+            <label for="resenia">Reseña</label>
+            <input class="form-control" id="resenia" name="resenia" type="text" required>
+            <label for="anio">Año</label>
+            <input class="form-control" id="anio" name="anio" type="number" required>
+            <label for="puntaje">Punataje</label>
+            <input class="form-control" id="puntaje" name="puntaje" type="number" required>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" onclick="NuevaTarjeta()">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <a class="soporte link" href="#">AYUDA</a>
+            <a class="soporte link" href="#">PRIVACIDAD</a>
+            <a class="soporte link" href="#">TERMINOS DE USO</a>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center d-flex ">
+            <div class="redes">
+              <a class="" href="https://twitter.com/?lang=es"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a class="" href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram "></i></a>
+              <a class="" href="https://www.facebook.com/"> <i class="fab fa-facebook"> </i></a>
+              <a class="" href="https://github.com/jcmartinezissa/ATLAS"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 text-center text-light" style="font-size: 12px; font-family: gilroy;">
+            <p style="color: black">© 2021 Rolling Code. Todos los derechos reservados. Atlas Películas se usa bajo licencia.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/app/peliculas.js">  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/679b08da40.js" crossorigin="anonymous"></script>
+    <script src="app/admin.js"></script>
+</body>
+
+</html>
