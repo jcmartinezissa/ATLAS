@@ -127,8 +127,8 @@ function cargarContenido (){
     document.getElementById('seriesgrid').innerText='';
        let  seriex = JSON.parse(window.localStorage.getItem("series"));
         seriex.forEach(function movies(seri){tarjtaShow(seri.titulo, seri.poster, seri.categoria, seri.resenia, seri.anio, seri.puntaje)} 
-          );        
-   }else{
+              );        
+   }else {
      document.getElementById('seriesgrid').innerText='Sin Contenido :(';
    };
 }
