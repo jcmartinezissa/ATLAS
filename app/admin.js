@@ -2,10 +2,9 @@ imprimirTabla();
 function imprimirTabla(){
     let cuentas = JSON.parse(localStorage.getItem("Cuentas"));
     let tabla = document.getElementById("tablaUsuarios")
-    let fila = cuentas.length;
-    let columna= 3;
-    for(let i = 0 ; i<cuentas.length; i++){
-        for(let j = 0 ; j<columna;j++){
+    console.log(cuentas);
+    
+        for(let j = 0 ; j<cuentas.length;j++){
             let nuevaFila = document.createElement("tr");
             let tnombre = document.createElement("td");
             let tclave = document.createElement("td");
@@ -36,7 +35,7 @@ function imprimirTabla(){
             acciones.append(eliminar);
             eliminar.append(botonSvg);
         }
-    }
+    
 
 }
 
