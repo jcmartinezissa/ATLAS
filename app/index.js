@@ -1,5 +1,4 @@
 const Cuentas = [];
-const cuentas = [];
 hideSuccess();
 hideAlerta();
 hideSuccess1();
@@ -18,17 +17,6 @@ class Cuenta {
 }
 
 
-/*
-if(localStorage.getItem("usuario")){
-    let admin = new Cuenta(0,"admin","admin",true);
-    Cuentas.push(admin);
-    let use = new Cuenta(0,"asd","1234",false);
-    Cuentas.push(use);
-    window.localStorage.setItem("usuario",JSON.stringify(cuentas))
-    localStorage.setItem("Cuentas", JSON.stringify(Cuentas));
-    console.log(Cuentas);
-}*/
-//inicio paliza
 function login(){
     let usuario = document.getElementById("usuario");
     let contrasenia = document.getElementById("contrasenia");
@@ -106,18 +94,9 @@ function Altas(id,nombre,clave,admin){
         mostrarAlerta1(error);
     }
     usuario.value = "";
-    contrasenia.value = "";
-        
+    contrasenia.value = "";        
   }
 
-  //  localStorage.setItem("llave","valor");
-    //    cuentas = localStorage.getItem('Cuenta');
-
-
-  //  window.localStorage.getItem(nombre) recuperar
-    
-//    localStorage.setItem("") //crear
-//Fin Paliza
 
 function NuevoUsuario() {
   hideAlerta1();
@@ -146,7 +125,6 @@ function NuevoUsuario() {
   clave.value ="";
   correo.value="";
   avatar.value="";
-
 }
 
 function LogIn() {
