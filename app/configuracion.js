@@ -93,7 +93,7 @@ function NuevaTarjeta() {
   series.push(card);
   window.localStorage.setItem("series", JSON.stringify(series));
 } 
-
+//mostar tarjeta cargada
   tarjtaShow(titulo, poster, categoria, resenia, anio, puntaje);
 };
 
@@ -113,9 +113,30 @@ function eliminarTarjeta(categoria, titulo){
   } ;
 };
 
+function cargarContenido (){  
+   if (localStorage.getItem("peliculas")){
+    document.getElementById('pelisgrid').innerText='';
+       let  pelis = JSON.parse(window.localStorage.getItem("peliculas"));
+        pelis.forEach(function movies(peli){tarjtaShow(peli.titulo, peli.poster, peli.categoria, peli.resenia, peli.anio, peli.puntaje)} 
+          );        
+   }else{
+     document.getElementById('pelisgrid').innerText='Sin Contenido :(';
+   };
+
+   if (localStorage.getItem("series")){
+    document.getElementById('seriesgrid').innerText='';
+       let  seriex = JSON.parse(window.localStorage.getItem("series"));
+        seriex.forEach(function movies(seri){tarjtaShow(seri.titulo, seri.poster, seri.categoria, seri.resenia, seri.anio, seri.puntaje)} 
+          );        
+   }else{
+     document.getElementById('seriesgrid').innerText='Sin Contenido :(';
+   };
+}
+
 function favoritos (){
   alert("Funcion no implementada :(");
-
 }
+
+cargarContenido();
 
 

@@ -16,7 +16,6 @@ class Cuenta {
   }
 }
 
-
 function login(){
     let usuario = document.getElementById("usuario");
     let contrasenia = document.getElementById("contrasenia");
@@ -88,7 +87,6 @@ function Altas(id,nombre,clave,admin){
             mostrarAlerta1(error);
         }
 
-
     }else{
         let error = "Usuario y/o contraseña incorrectos"
         mostrarAlerta1(error);
@@ -140,8 +138,11 @@ function LogIn() {
      //alert('Bienvenido');
      mostrarSuccess("Bienvenido");
      
-     let favoritos = document.getElementById("btnfavoritos text-light");
+     let favoritos = document.getElementById("btnfavoritos");  
      favoritos.setAttribute("class", "nav-link active text-dark");
+
+     let configuracion =document.getElementById("btnconfiguracion")
+     configuracion.setAttribute("class", "nav-link active text-dark");
      
    }else{
     mostrarAlerta("Nombre de usuario o contraseña no validos");
