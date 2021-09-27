@@ -10,187 +10,48 @@
   <title>★ATLAS★</title>
   <link rel="stylesheet" href="css/peliculas_estreno.css">
   <link rel="stylesheet" href="css/styles-slider-recommeded-movie.css">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<body class="container">
+  <nav class="navbar navbar-expand-lg navbar-light shadow p-3 mb-5 barra text-end">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
-        <img src="/img/logo.svg" alt="logo_atlas" width="250" height="60" class="d-inline-block align-text-top">
+        <img src="img/logo.svg" alt="logo_atlas" width="150" height="45" class="d-inline-block align-text-top">
       </a>
       <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barranav"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="barranav">
+      <div class="collapse navbar-collapse justify-content-end" id="barranav">
         <div class="navbar-nav">
-          <a class="nav-link active text-light" aria-current="page" href="#">Peliculas</a>
-          <a class="nav-link active text-light" href="#">Series</a>
-          <a id="btnRegistro text-light" name="btnRegistro" class="nav-link active text-light" href="#" data-bs-toggle="modal"
-            data-bs-target="#formulario">Iniciar Sesion</a>
-          <a id="btnLogin" name="btnLogin" class="nav-link active text-light" href="#">Registarse</a>
-        </div>
+          <a class="nav-link active" aria-current="page" href="Peliculas.html">Peliculas</a>
+          <a class="nav-link active" href="series.html">Series</a>
+          <a id="btninicio text-light" name="btninicio" class="nav-link active" href="index.html"
+            data-bs-toggle="modal" data-bs-target="#formulario">Iniciar Sesion</a>
+          <a id="btnRegistro text-light" name="btnRegistro" class="nav-link active" href="#"
+            data-bs-toggle="modal" data-bs-target="#registro">Registrarse</a>
+            <a  id="btnfavoritos" class="nav-link active visually-hidden" aria-current="page" href="#">Mis Favoritos</a>          
+            <a  id ="btnconfiguracion" class="nav-link active visually-hidden" aria-current="page" href="configuracion.html">configuración</a>       
+        </div> 
       </div>
-    </nav>
-    <section id="slider" name="slider">
-      <div
-        id="carouselExampleControls"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="/img/slider/mk.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="/img/slider/spacejam.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="/img/slider/tenet.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
+
+  </nav>
+  <section class="mislider">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img src="img/slider/slider4.png" class="d-block w-100" alt="..." />
+        </div>        
+        <div class="carousel-item active">
+          <img src="img/slider/slider1.png" class="d-block w-100" alt="..." />
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev"
-        >
-          <span
-            class="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="next"
-        >
-          <span
-            class="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-    <section class="bg-dark">
-      <div class="container pt-4">
-        <h2 class="title-movie-recommended text-center text-light">
-          Peliculas Recomendadas
-        </h2>
-      </div>
-      <!--Inicio del slider de peliculas recomendadas-->
-      <div class="container-fluid p-3">
-        <div
-          id="carouselExampleIndicators"
-          class="carousel slide"
-          data-interval="false"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="img-slider-recommeded col">
-                  <img
-                    src="/img/slider-recommended-movie/img-slider-recomend1.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="img-slider-recommeded col">
-                  <img
-                    src="/img/slider-recommended-movie/img-slider-recomend2.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="img-slider-recommeded col">
-                  <img
-                    src="/img/slider-recommended-movie/img-slider-recomend3.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="img-slider-recommeded col">
-                  <img
-                    src="/img/slider-recommended-movie/img-slider-recomend4.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="img-slider-recommeded col">
-                  <img
-                    src="/img/slider-recommended-movie/img-slider-recomend5.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="img-slider-recommeded col">
-                  <img
-                    src="/img/slider-recommended-movie/img-slider-recomend6.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="img-slider-recommeded col">
-                  <img
-                    src="/img/slider-recommended-movie/img-slider-recomend7.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="img-slider-recommeded col">
-                  <img
-                    src="/img/slider-recommended-movie/img-slider-recomend8.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span
-              class="carousel-movie-recommeded carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span
-              class="carousel-movie-recommeded carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+        <div class="carousel-item">
+          <img src="img/slider/slider2.png" class="d-block w-100" alt="..." />
         </div>
+        <div cass="carousel-item">
+          <img src="img/slider/slider3.png" class="d-block w-100" alt="..." />
+        </div>                    
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
         data-bs-slide="prev">
@@ -203,105 +64,217 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    </section>
-<!--INICIO ESTRENOS-->
-<section id="estrenos" name="estrenos" class="">
-  <div class ="row bg-dark">
-      <h2 class="estreno-texto  text-light"> Peliculas Estreno</h2>
-      <div class="d-flex justify-content-around col-12">
-          <div class="card" style="width: 10rem;">
-              <div class="square-r caja text-center text-light bg-danger">
-                  <p class =" h1">1</p>
+  </section>
+  <section>
+    <div class="container pt-4">
+      <h4 class=" shadow p-3 mb-5">
+        Peliculas Recomendadas
+      </h4>
+    </div>
+    <!--Inicio del slider de peliculas recomendadas-->
+    <div class="container-fluid p-3">
+      <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="img-slider-recommeded col">
+                <img src="img/slider-recommended-movie/img-slider-recomend1.jpg" class="d-block w-100" alt="..." />
               </div>
-              <img class="IMG" src="img/estrenos/0_dragonFury_card.jpg" alt="Dragon Fury" />
-              <button class="btn btn-danger text-light">Ver Pelicula</button>
-          </div>
-          <div id="" class="card" style="width: 10rem;">
-              <div class="square-l text-center text-light bg-danger">
-                  <p class =" h1">2</p>
+              <div class="img-slider-recommeded col">
+                <img src="img/slider-recommended-movie/img-slider-recomend2.jpg" class="d-block w-100" alt="..." />
               </div>
-              <img class="IMG" src="img/estrenos/1_fast_and_furious_card.jpg" alt="Fast and Furious" />
-              <button class="btn btn-danger text-light">Ver Pelicula</button>
-          </div>
-          <div id="" class="card" style="width: 10rem;">
-              <div class="square-r text-center text-light bg-danger">
-                  <p class =" h1">3</p>
+              <div class="img-slider-recommeded col">
+                <img src="img/slider-recommended-movie/img-slider-recomend3.jpg" class="d-block w-100" alt="..." />
               </div>
-              <img class="IMG" src="img/estrenos/2_liga_de_la_justicia_card.jpg" alt="Liga de la Justicia de Zack Snyder" />
-              <button class="btn btn-danger text-light">Ver Pelicula</button>    
-          </div>
-          <div id="" class="card" style="width: 10rem;">
-              <div class="square-l text-center text-light bg-danger">
-                  <p class =" h1">4</p>
+              <div class="img-slider-recommeded col">
+                <img src="img/slider-recommended-movie/img-slider-recomend4.jpg" class="d-block w-100" alt="..." />
               </div>
-              <img class="IMG" src="img/estrenos/3_parasite_card.jpg" alt="Parasite" />
-              <button class="btn btn-danger text-light">Ver Pelicula</button>
+            </div>
           </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="img-slider-recommeded col">
+                <img src="img/slider-recommended-movie/img-slider-recomend5.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="img-slider-recommeded col">
+                <img src="img/slider-recommended-movie/img-slider-recomend6.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="img-slider-recommeded col">
+                <img src="img/slider-recommended-movie/img-slider-recomend7.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="img-slider-recommeded col">
+                <img src="img/slider-recommended-movie/img-slider-recomend8.jpg" class="d-block w-100" alt="..." />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-movie-recommeded carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-movie-recommeded carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        
+        </button>
       </div>
-  </div>
-</section>
-<!--FIN ESTRENOS-->
-  <!-- Modal -->
+    </div>
+    </div>
+  </section>
+  <!--INICIO ESTRENOS-->
+  <section id="estrenos" name="estrenos" class="">
+    <div class="row">
+      <div class="container pt-4">
+        <h4 class=" shadow p-3 mb-5">
+          Proximos estrenos
+        </h4>
+      </div>
+      <div class="d-flex justify-content-around col-12">
+        <div class="card" style="width: 10rem;">
+          <div class="square-r caja text-center text-light bg-danger">
+            <p class=" h1">1</p>
+          </div>
+          <img class="IMG" src="img/estrenos/0_dragonFury_card.jpg" alt="Dragon Fury" />
+          <button class="btn btn-danger text-light">Añadir a favoritos</button>
+        </div>
+        <div id="" class="card" style="width: 10rem;">
+          <div class="square-l text-center text-light bg-danger">
+            <p class=" h1">2</p>
+          </div>
+          <img class="IMG" src="img/estrenos/1_fast_and_furious_card.jpg" alt="Fast and Furious" />
+          <button class="btn btn-danger text-light">Añadir a favoritos</button>
+        </div>
+        <div id="" class="card" style="width: 10rem;">
+          <div class="square-r text-center text-light bg-danger">
+            <p class=" h1">3</p>
+          </div>
+          <img class="IMG" src="img/estrenos/2_liga_de_la_justicia_card.jpg" alt="Liga de la Justicia de Zack Snyder" />
+          <button class="btn btn-danger text-light">Añadir a favoritos</button>
+        </div>
+        <div id="" class="card" style="width: 10rem;">
+          <div class="square-l text-center text-light bg-danger">
+            <p class=" h1">4</p>
+          </div>
+          <img class="IMG" src="img/estrenos/3_parasite_card.jpg" alt="Parasite" />
+          <button class="btn btn-danger text-light">Añadir a favoritos</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--FIN ESTRENOS-->
+  <!-- Modal iniciar sesion-->
   <div class="modal fade" id="formulario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="formularioTitulo">Ingrese sus datos</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+        <div class="modal-header bg-danger">
+          <h5 class="modal-title text-light" id="formularioTitulo">Ingresá con tu cuenta</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form>
+            <div id="exito" class="alert alert-success" role="alert">
+              This is a success alert—check it out!
+            </div>
+            <div id="alerta"class="alert alert-danger" role="alert">
+              This is a danger alert—check it out!
+            </div>
             <label for="usuario">Usuario</label>
             <input class="form-control" id="usuario" name="contrasenia" type="text" required>
             <br>
             <label for="contrasenia">Contraseña</label>
-            <input class="form-control" id="contrasenia" name="contrasenia"type="password" minlength="4" maxlength="10"  required>
-            <input class="btn btn-primary" type="submit" onclick="validacion()" value="Guardar">
-        </form>  
+            <input class="form-control" id="contrasenia" name="contrasenia" type="password" minlength="4" maxlength="10"
+              required>
+          </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger" onclick="LogIn()">Entrar</button>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  <!-- Modal iniciar sesion-->
+  <!-- Modal formulario registro-->
+  <div class="modal fade" id="registro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger">
+          <h5 class="modal-title text-light" id="registroTitulo">Ingrese sus datos para registrarse</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div id="exito1" class="alert alert-success" role="alert">
+              This is a success alert—check it out!
+            </div>
+            <div id="alerta1"class="alert alert-danger" role="alert">
+              This is a danger alert—check it out!
+            </div>
+            <label for="usuario">Usuario</label>
+            <input class="form-control" id="usuario1" name="contrasenia1" type="text" required>
+            <br>
+            <label for="contrasenia">Contraseña</label>
+            <input class="form-control" id="contrasenia1" name="contrasenia1" type="password" minlength="4"
+              maxlength="10" required>
+            <br>
+            <label for="correo">Correo</label>
+            <input class="form-control" id="correo" name="correo" type="email">
+            <br>
+            <label for="avatar">Avatar /Foto de perfil</label>
+            <input class="form-control" id="avatar" name="avatar" type="file">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="CerrarRegistro" name="CerrarRegistro"> Cerrar</button>
+          <button type="button" class="btn btn-danger" id="guardar" name="guardar" onclick="NuevoUsuario()" >Guardar</button>
         </div>
       </div>
     </div>
   </div>
-<footer>
-  <div class="container">
+  <!-- Modal Registros-->
+  <footer>
+    <div class="container">
       <div class="row">
-              <div class="col-12 text-center">
-                  <a class="btn-link" href="#">AYUDA</a>
-                  <a class="btn-link" href="#">PRIVACIDAD</a>
-                  <a class="btn-link" href="#">TERMINOS DE USO</a>
-              </div>
-          </div>
+        <div class="col-12 text-center">
+          <a class="soporte link" href="#">AYUDA</a>
+          <a class="soporte link" href="#">PRIVACIDAD</a>
+          <a class="soporte link" href="#">TERMINOS DE USO</a>
+        </div>
       </div>
-  </div>
-  <div class="container">
+    </div>
+    </div>
+    </div>
+    <div class="container">
       <div class="row">
-          <div class="col-12 text-center d-flex ">
-              <div class="redes">
-                  <a class="" href="https://twitter.com/?lang=es"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                  <a class="" href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram "></i></a>
-                  <a class="" href="https://www.facebook.com/"> <i class="fab fa-facebook"> </i></a>
-                  <a class="" href="https://github.com/jcmartinezissa/ATLAS"><i class="fab fa-github"></i></a>
-              </div>
+        <div class="col-12 text-center d-flex ">
+          <div class="redes">
+            <a class="" href="https://twitter.com/?lang=es"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="" href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram "></i></a>
+            <a class="" href="https://www.facebook.com/"> <i class="fab fa-facebook"> </i></a>
+            <a class="" href="https://github.com/jcmartinezissa/ATLAS"><i class="fab fa-github"></i></a>
           </div>
+        </div>
       </div>
-  </div>
-  <div class="container-fluid">
+    </div>
+    <div class="container-fluid">
       <div class="row">
-          <div class="col-12 text-center text-light" style="font-size: 12px; font-family: gilroy;">
-              <p>© 2021 Rolling Code. Todos los derechos reservados.  Atlas Películas se usa bajo licencia.</p>
-          </div>
+        <div class="col-12 text-center text-dark" style="font-size: 12px; font-family: gilroy;">
+          <p style="color: black">© 2021 Rolling Code. Todos los derechos reservados. Atlas Películas se usa bajo licencia.</p>
+        </div>
       </div>
-  </div>
-</footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    </div>
+  </footer>
+  <script src="/app/index.js">  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+    <script src="app/index.js"></script>
+</body>
+
 </html>

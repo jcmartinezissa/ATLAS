@@ -1,0 +1,31 @@
+#pelisgrid{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+#seriesgrid{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(211, 211, 211, 0.5);
+    border-radius: 5px;
+}
+
+
+.avatar{
+    position: relative;
+    background-color: gray;
+    width: 80px;
+    height: 80px;
+    float: right; 
+    clear: both;
+    display: table;
+    border-radius: 50%;
+    z-index: 100;
+    mask-image: none;  
+    overflow: hidden;  
+}
+.avatar.img{
+    object-fit: cover;
+    object-position: center center;
+}

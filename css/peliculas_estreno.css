@@ -39,16 +39,16 @@
 
 /*Footer*/
 footer{
-    background-color: #003;
+    padding: 1rem;
+    background-color:lightgray;    
 }
 .redes a i{
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: bolder;
     font-size: 2rem;
     margin: 1rem;
     opacity:0.6;
-
 }
 .redes{
     margin: auto;
@@ -60,14 +60,17 @@ footer{
     transition: 0.4s;
     opacity: 0.8;
 }
-
+.soporte{
+    text-decoration: none;
+    color: black;
+}
 .soporte a{
     opacity:0.6;
-    color: white;
+    color: black;
 
 }
 .soporte a:hover{
     opacity:1;
-    color: white;
+    color: black;
     transition: 0.9s;
 }
