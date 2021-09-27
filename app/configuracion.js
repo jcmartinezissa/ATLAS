@@ -58,16 +58,13 @@ function tarjtaShow(titulo, poster, categoria, resenia, anio, puntaje) {
 
 
     //insertar en grilla
-    if (categoria='Pelicula') {
+    if (categoria=='Pelicula') {
     
       document.getElementById("pelisgrid").append(tarjetaV);   
     }else {
-      document.getElementById("seriesgrid").append(tarjetaV);   
-      
+      document.getElementById("seriesgrid").append(tarjetaV);         
     } 
 
-    
-   console.log("pelicula en grilla");
 }
 
 function NuevaTarjeta() {
