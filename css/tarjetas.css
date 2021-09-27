@@ -1,13 +1,17 @@
-.tarjeta{
-    margin: 1rem;
-    padding: 0px;
-    border: 5px solid;
-    border-color: gray;
-    box-shadow: gray 20px;
 
+.card{
+    margin: 2px;
 }
-.detalle{
-    padding: 1px;
-    color: white;
-    background-color: black;
+
+.puntaje{
+    padding: 1rem;
+    font: bold;   
+    float: right; 
+    clear: both;
+    display: table;
+    border: 3px solid #73AD21;
+    
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 96%);
+
 }
